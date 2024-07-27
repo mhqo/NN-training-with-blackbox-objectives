@@ -3,6 +3,6 @@ Some code to train an NN for a combination of a white-box function $L_{wb}(\cdot
 Let $\mu$ be the networks parameters and $\theta \sim p(\theta; \mu) = \mathcal{N}(\mu, \sigma^2 \cdot I)$ with $\sigma$ fixed (hyperparameter).
 Then, the training objective becomes
 
-$$\min_\mu  L(\mu) + \lambda \int  L_{bb}(\theta) p(\theta; \mu) \; \rm d \theta $$
+$$\min_\mu  L_{wb}(\mu) + \lambda \int  L_{bb}(\theta) p(\theta; \mu) \; \rm d \theta $$
 
 For details and an example see `NN training with blackbox lossfunction.ipynb`
